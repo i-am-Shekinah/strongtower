@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#logo-container {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/church-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbar {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+body {
+    background: red;
+    background-image: url(../images/bgimage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.my-container {
+    /* padding: 0 70px; */
+    background: rgba(0, 0, 0, .2);
+    height: 100%;
+}
+
+.my-container::before {
+    content: '';
+}
+
+ul.navbar-nav {
+    /* width: 800px; */
+    background: #000;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+a.nav-link.active {
+    color: #00ff00 !important;
+}
