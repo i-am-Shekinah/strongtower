@@ -1,3 +1,8 @@
+:root {
+    --white: #fff;
+    --green: #00ff00;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +26,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    color: #fff;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .body-container {
@@ -55,13 +62,13 @@ body {
 }
 
 .nav .nav-links-wrapper .nav-link {
-    color: #fff;
+    color: var(--white);
     font-weight: 600;
     font-size: 14px;
 }
 
 .active {
-    color: #00ff00;
+    color: var(--green);
 }
 
 .nav .nav-links-wrapper .nav-link::after {
@@ -69,7 +76,7 @@ body {
     display: block;
     height: 2px;
     width: 0;
-    background-color: #00ff00;
+    background-color: var(--green);
     transition: all 700ms ease-out;
     margin: auto;
 }
@@ -80,7 +87,7 @@ body {
 }
 
 .nav .nav-links-wrapper .nav-link:hover {
-    color: #00ff00;
+    color: var(--green);
     transition: 300ms ease;
 }
 
@@ -90,4 +97,18 @@ body {
 .main p.title-text {
     font-size: 40px;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main p.subtitle {
+    font-weight: bold;
+}
+
+.main .supporting-text .btn {
+    padding: 5px;
+    background: var(--green);
+    border: 0;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
 }
