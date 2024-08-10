@@ -1,3 +1,4 @@
+console.log('debug');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav-links');
 const closeIcon = document.querySelector('.close-icon');
@@ -5,6 +6,8 @@ const closeIcon = document.querySelector('.close-icon');
 // Function to toggle navigation
 function toggleNav(event) {
     event.preventDefault(); // Prevent any default behavior
+    console.log('toggling nav');
+
     nav.classList.toggle('nav-active');
 }
 
