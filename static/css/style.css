@@ -246,21 +246,18 @@ body {
     }
     /* nav */
     .nav-links {
-        display: block;
-        opacity: 0;
+        display: none;
         position: absolute;
         right: 0;
         height: 100vh;
         top: 0;
         background-color: var(--white);
         /* flex-direction: column; */
-        width: 0;
+        width: 100%;
         padding-top: 30px;
     }
     .nav-active {
         display: block;
-        opacity: 1;
-        width: 100%;
         transition: all 300ms ease-in;
     }
     .nav-links li {
