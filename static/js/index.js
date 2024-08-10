@@ -9,12 +9,3 @@ hamburger.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     nav.classList.toggle('nav-active');
 })
-
-// using touchstart
-hamburger.addEventListener('touchstart', () => {
-    nav.classList.toggle('nav-active');
-});
-
-closeIcon.addEventListener('touchstart', () => {
-    nav.classList.toggle('nav-active');
-})
