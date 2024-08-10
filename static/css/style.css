@@ -19,6 +19,7 @@ body {
     color: var(--white);
     font-size: 14px;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 body {
@@ -32,6 +33,10 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, .5);
     padding: 0 70px;
+}
+
+.active {
+    color: var(--green);
 }
 
 
@@ -139,9 +144,24 @@ body {
 }
 
 .hamburger .lines {
-    background-color: var(--white);
-    width: 60px;
-    height: 3px;
+    background-color: var(--green);
+    width: 100%;
+    height: 2px;
+}
+
+.close-icon {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+}
+
+.close-icon .lines {
+    background-color: var(--black);
+    width: 20px;
+    height: 2px;
+    position: absolute;
 }
 
 
@@ -220,35 +240,70 @@ body {
 }
 
 @media (max-width: 768px) {
+    .logo-div {
+        width: 40px;
+        height: 40px;
+    }
+    /* nav */
     .nav-links {
-        display: none;
+        display: block;
+        opacity: 0;
         position: absolute;
         right: 0;
         height: 100vh;
-        top: 60px;
-        background-color: var(--black);
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        top: 0;
+        background-color: var(--white);
+        /* flex-direction: column; */
+        width: 0;
+        padding-top: 30px;
     }
     .nav-active {
-        display: flex;
+        width: 100%;
+        opacity: 1;
+        transition: all 300ms ease-in;
     }
     .nav-links li {
         padding: 20px 0;
+        margin-left: 30px;
+    }
+    .nav-link {
+        color: var(--black);
+    }
+    .close-icon {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 20px;
+        border-radius: 5px;
+        border: 2px solid var(--black);
+    }
+    .close-line1 {
+        transform: rotate(45deg);
+    }
+    .close-line2 {
+        transform: rotate(-45deg);
     }
     .hamburger {
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 3px;
+        border: 2px solid var(--green);
+        width: 40px;
+        padding: 10px;
+        border-radius: 5px;
     }
-    .toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
+    /* main */
+    .main .text-wrapper {
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
     }
-    .toggle .line2 {
-        opacity: 0;
+    .main .text-wrapper .supporting-text {
+        margin-top: 50px;
     }
-    .toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+    .body-container {
+        padding: 0 20px;
     }
 }
