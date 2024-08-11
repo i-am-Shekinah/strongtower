@@ -65,6 +65,11 @@ body {
     height: 100%;
 }
 
+i.nav-icon {
+    display: none;
+    padding-right: 10px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -246,6 +251,9 @@ body {
         height: 40px;
     }
     /* nav */
+    i.nav-icon {
+        display: inline;
+    }
     .nav-links {
         display: block;
         opacity: 0;
