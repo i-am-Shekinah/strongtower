@@ -12,7 +12,7 @@
 
 html,
 body {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -22,18 +22,24 @@ body {
     overflow-x: hidden;
 }
 
-body {
+.body-container {
+    overflow-x: hidden;
+}
+
+.bg-image {
     background-image: url(../images/bgimage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.body-container {
+.bg-overlay {
     height: 100%;
     background: rgba(0, 0, 0, .5);
     padding: 0 70px;
-    overflow-x: hidden;
 }
 
 .active {
@@ -172,17 +178,14 @@ i.nav-icon {
 }
 
 
-/* main */
+/* header */
 
-
-/* main */
-
-.main {
+.header {
     display: block;
     height: 50%;
 }
 
-.main .text-wrapper {
+.header .text-wrapper {
     display: flex;
     height: 100%;
     justify-content: space-between;
@@ -190,17 +193,17 @@ i.nav-icon {
     margin: auto;
 }
 
-.main p.title-text {
+.header p.title-text {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.main p.subtitle {
+.header p.subtitle {
     font-weight: bold;
 }
 
-.main .supporting-text {
+.header .supporting-text {
     /* background-color: #000; */
     /* height: 150px; */
     display: flex;
@@ -208,7 +211,7 @@ i.nav-icon {
     gap: 24px;
 }
 
-.main .supporting-text .bible-verse {
+.header .supporting-text .bible-verse {
     display: block;
     width: 250px;
     padding: 20px;
@@ -217,7 +220,7 @@ i.nav-icon {
     background-color: var(--black);
 }
 
-.main .supporting-text .btn {
+.header .supporting-text .btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,15 +238,60 @@ i.nav-icon {
     text-decoration: none;
 }
 
-.main .supporting-text .btn:hover {
+.header .supporting-text .btn:hover {
     cursor: pointer;
     /* opacity: .7; */
     font-size: 16px;
+    opacity: .7;
 }
 
-.main .supporting-text .btn .btn-text {
+.header .supporting-text .btn .btn-text {
     /* padding-right: 12px; */
     font-family: 'Montserrat' Arial, Helvetica, sans-serif !important;
+}
+
+
+/* main */
+
+.main {
+    color: var(--black);
+}
+
+.section,
+.sub-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.heading1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.heading2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.heading3 {
+    font-size: 16px;
+}
+
+.mission-and-vision-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mission-and-vision {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 300ms;
 }
 
 @media (max-width: 768px) {
@@ -320,16 +368,19 @@ i.nav-icon {
         padding: 10px;
         border-radius: 5px;
     }
-    /* main */
-    .main .text-wrapper {
+    /* header */
+    .header .text-wrapper {
         text-align: center;
         flex-direction: column;
         margin-top: 20px;
     }
-    .main .text-wrapper .supporting-text {
+    .header .text-wrapper .supporting-text {
         margin-top: 50px;
     }
-    .body-container {
+    .header .supporting-text .btn {
+        margin-bottom: 20px;
+    }
+    .bg-overlay {
         padding: 0 20px;
     }
 }
